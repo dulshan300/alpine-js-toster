@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlpineJs Globle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+    <script defer src="https://unpkg.com/alpinejs@3.9.3/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app" x-data="app">
+        <div class="btns">
+            <button x-on:click="toster.success('Test Success')">Success</button>
+            <button x-on:click="toster.error('Test Error')">Error</button>
+            <button x-on:click="toster.info('Test Info')">Info</button>
+            <button x-on:click="toster.warning('Test Warning')">Warning</button>
+        </div>
+
+
+        <div class="toster-collection">
+            <template :key="tost.timestamp" x-for="tost in toster.tosts">
+                <div class="tost" :class="tost.type" >
+                    <i :class="tost.icon"></i>
+                    <span x-text="tost.message"></span>
+                </div>
+
+            </template>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

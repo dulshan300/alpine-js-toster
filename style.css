@@ -1,0 +1,33 @@
+.toster-collection {
+    display: inline-flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.toster-collection .tost {
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 3px 12px;
+    min-width: 100px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.toster-collection .tost i {
+    margin-right: 15px;
+}
+.toster-collection .tost.success {
+    background: #4cd137;
+}
+.toster-collection .tost.error {
+    background: #e84118;
+}
+.toster-collection .tost.info {
+    background: #00a8ff;
+}
+.toster-collection .tost.warning {
+    background: #fbc531;
+}
